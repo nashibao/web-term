@@ -1,0 +1,10 @@
+
+{
+  "name": "web-term",
+  "version": "1.0.0",
+  "dependencies": {
+    "knockout": "*",
+    "knockout-mapping": "*",
+    "sugar": "*"
+  }
+}

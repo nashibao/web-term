@@ -1,0 +1,6 @@
+/.sass-cache/
+node_modules
+*.sublime-*
+local_config.*
+/public/vendor/
+/public/libs/components/
