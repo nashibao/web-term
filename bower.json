@@ -5,6 +5,8 @@
   "dependencies": {
     "knockout": "*",
     "knockout-mapping": "*",
-    "sugar": "*"
+    "knockout-extended-handler": "git@github.com:nashibao/knockout-extended-handler.git",
+    "sugar": "*",
+    "animate.css": "*"
   }
 }
