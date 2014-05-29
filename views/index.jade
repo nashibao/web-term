@@ -17,6 +17,7 @@ html
   head
     title= title
     link(rel="stylesheet", href="/stylesheets/style.css")
+    script(src="/vendor/jquery/dist/jquery.min.js")
     script(src="/vendor/knockout/dist/knockout.js")
     script(src="/vendor/knockout-mapping/build/output/knockout.mapping-latest.js")
     script(src="/vendor/sugar/release/sugar-full.min.js")
@@ -42,7 +43,8 @@ html
                 .output(data-bind="html: $parent.convert($data)")
 
               .input 
-                input.input-content(data-bind="value: _input")
+                input.input-content(data-bind="value: _input")#input-content
                 .input-arrow.pulse
   script.
-    require('web-term')
+    require('web-term');
+    $('#input-content').focus();
