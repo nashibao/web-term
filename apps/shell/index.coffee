@@ -12,19 +12,8 @@ term = pty.spawn("fish", [],
     }
 )
 
-
-# # stdin to terminal emulater
-# process.stdin.setEncoding('utf8')
-# process.stdin.on "readable", ->
-#   chunk = process.stdin.read()
-#   if chunk
-#       term.write chunk
-#   return
-
 # socket.io
 io = global.io
-
-cache = ''
 
 io.sockets.on "connection", (socket) ->
 
@@ -33,9 +22,6 @@ io.sockets.on "connection", (socket) ->
     return if not data
     lines = data.split('\r')
     socket.emit "res", {lines: lines}
-
-  socket.emit "news",
-    hello: "world"
 
   socket.on "command", (data) ->
     term.write data.command + '\r'
